@@ -2,6 +2,7 @@
 describe('Contact Us Form Testing', () => {
     beforeEach(() => {
          //custom command to visit the contact us form
+         //Using camelcase convention for naming custom commands
          cy.visitContactForm()
        });
     
@@ -19,6 +20,7 @@ describe('Contact Us Form Testing', () => {
     it('should provide success message after successful submission - Positive', () => {
         //loading data from contactus.json file & calling the call back function with data contents as the argument
         cy.fixture('contactus_data.json').then((Testdata) => {
+         //Using camelcase for validContactUs Data object creation
             const validContactUsData = Testdata.valid[0]
             //assignment of the content data 
           const Contact_Email = validContactUsData.Contact_Email;
@@ -45,6 +47,7 @@ describe('Contact Us Form Testing', () => {
      it('should provide success message for an invalid data submission  - Negative', () => {
 
         cy.fixture('contactus_data.json').then((Testdata) => {
+         //Using camelcase for invalidContactUsData object creation
 
             const invalidContactUsData = Testdata.invalid[0]
             //assignment of the content data 
@@ -72,7 +75,7 @@ describe('Contact Us Form Testing', () => {
      it('should provide success message for blank form submission - Negative', () =>{
             
         cy.fixture('contactus_data.json').then((Testdata) => {
-
+            //Using camelcase for blankContactUsData object creation
             const blankContactUsData = Testdata.blank[0]
             //assignment of the content data 
           const Contact_Email = blankContactUsData.Contact_Email;

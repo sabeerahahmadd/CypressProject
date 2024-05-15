@@ -1,7 +1,8 @@
 describe('Add Product to the Cart', () => {
 
     beforeEach(() => {
-        //custom command to visit the website
+        //Custom command to visit the website
+        //Using camelcase convention for naming custom commands 
         cy.addProductToTheCart(2)
       });
 
@@ -18,6 +19,7 @@ describe('Add Product to the Cart', () => {
        
         //loading data from contactus.json file & calling the call back function with data contents as the argument
         cy.fixture('payment_info.json').then((data) => {
+        //Using CamelCase for validPaymentData object creation
             const validPaymentData = data.valid[0]
             //assignment of the content data 
           const Name = validPaymentData.Name;
@@ -61,6 +63,7 @@ describe('Add Product to the Cart', () => {
        
         //loading data from contactus.json file & calling the call back function with data contents as the argument
         cy.fixture('payment_info.json').then((data) => {
+          //Using camelcase for invalidPyamentData object  creation
             const invalidPaymentData = data.invalid[0]
             //assignment of the content data 
           const Name = invalidPaymentData.Name;
@@ -106,6 +109,7 @@ describe('Remove Product from Cart', ()=> {
 
     beforeEach(() => {
         //custom command to visit the website
+        //Using camelcase convention for naming custom commands
         cy.addProductToTheCart(3)
       });
 
@@ -116,6 +120,7 @@ describe('Remove Product from Cart', ()=> {
         cy.get('.success > :nth-child(2)').should('be.visible')
         cy.wait(2000)
         //remove a product from the cart
+        //Using camelcase convention for naming custom commands
         cy.removeProductFromTheCart(1)
          //locate the responsive table and asserting it through its length
         cy.get('#page-wrapper > div > div.col-lg-8 > div').should('have.length.lessThan', 2)
@@ -126,6 +131,7 @@ describe('Remove Product from Cart', ()=> {
         //asserting on the basis of the url of the page
         cy.url('include', '/cart.html')
         //remove 2 products from the cart
+        //Using camelcase convention for naming custom commands
         cy.removeProductFromTheCart(2)
 
          //locate the responsive table and asserting it through its length
