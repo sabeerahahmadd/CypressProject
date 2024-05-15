@@ -1,0 +1,26 @@
+{
+  "valid": [
+  {
+    "Contact_Email": "abc@mailinator.com",
+    "Contact_Name": "abc xyz",
+    "Message": "Hello, I really like the website"
+  }
+],
+  "invalid" : [
+    {
+      "Contact_Email": "abc@123",
+      "Contact_Name": "abc332",
+      "Message": "Hello, 7757874"
+    }
+    
+], 
+  "blank" : [
+    {
+      "Contact_Email": " ",
+      "Contact_Name": " ",
+      "Message": " "
+    }
+  ]
+    
+}
+  

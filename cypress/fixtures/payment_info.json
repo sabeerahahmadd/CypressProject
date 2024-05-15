@@ -1,0 +1,42 @@
+{
+    "valid": [
+        {
+            "Name": "abc xyz",
+            "Country":"Pakistan",
+            "City":  "City",
+            "Credit_Card": "4231-9089-6654-3321",
+            "Month":"12",
+            "Year": "2024"   
+        }
+    ], 
+
+    "invalid":[
+            {
+
+            "Name": "abc xyz",
+            "Country":" ",
+            "City":  " ",
+            "Credit_Card": "4231-9089-6654-3321",
+            "Month":" ",
+            "Year": " "   
+
+            }
+
+
+
+        ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
